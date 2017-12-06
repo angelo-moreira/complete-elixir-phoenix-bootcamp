@@ -1,3 +1,4 @@
 discuss/_build
 discuss/deps
+discuss/.mix
 node_modules
