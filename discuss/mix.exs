@@ -20,7 +20,7 @@ defmodule Discuss.Mixfile do
     [mod: {Discuss, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger,
                     :gettext, :phoenix_ecto, :mariaex, :ueberauth,
-                    :ueberauth_github]]
+                    :ueberauth_github, :distillery, :edeliver]]
   end
 
   # Specifies which paths to compile per environment.
@@ -41,7 +41,8 @@ defmodule Discuss.Mixfile do
      {:cowboy, "~> 1.0"},
      {:ueberauth, "~> 0.4"},
      {:ueberauth_github, "~> 0.6"},
-     {:distillery, "~> 1.0"}]
+     {:edeliver, "~> 1.4.3"},
+     {:distillery, "~> 1.4"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
