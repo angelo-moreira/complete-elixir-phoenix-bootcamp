@@ -7,7 +7,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
 config :discuss, Discuss.Endpoint,
-  http: [port: 4000],
+  http: [port: 80],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -35,9 +35,9 @@ config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
 config :discuss, Discuss.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "taj",
-  password: "",
-  database: "discuss_dev",
-  hostname: "localhost",
+  adapter: Ecto.Adapters.MySQL,
+  hostname: System.get_env("DB_HOST"),
+  database: System.get_env("DB_NAME"),
+  username: System.get_env("DB_USER"),
+  password: System.get_env("DB_PASS"),
   pool_size: 10
